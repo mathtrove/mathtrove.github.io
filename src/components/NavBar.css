@@ -1,0 +1,85 @@
+.menu-pop{
+    display: none;
+    position: fixed;
+    background-color: black;
+    right: 0px; top: 0px; bottom: 0px;
+    padding: 1.2rem 2rem;
+    z-index: 2;
+    font-size: 56px;
+}
+.nav-link-box-mob{
+    display: none;
+}
+.menu-pop ul{
+    color: white;
+    list-style-type: none;
+}
+
+nav{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-link-box, .nav-links{
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    list-style-type: none;
+}
+.nav-title{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+.nav-title img{
+    width: 32px;
+}
+.cta{
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 56px;
+}
+
+@media screen and (width <= 1024px) {
+    .menu-pop.active{
+        display: flex;
+        flex-direction: column;
+        animation: slideFromRight 0.5s forwards;
+    }
+    .cta{
+        margin-top: 16px;
+    }
+    .nav-link-box{ display: none;}
+    .nav-link-box-mob{
+        display: block;
+    }
+}
+@media screen and (width <= 540px) {
+    .menu-pop{
+        inset: 0px;
+    }
+    .menu-pop .cta{
+        font-size: 42px;
+        font-weight: 400;
+    }
+}
+@keyframes slideFromRight {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes slideToLeft{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
