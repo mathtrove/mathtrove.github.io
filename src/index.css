@@ -3,6 +3,7 @@
 :root {
   font-family: 'Space Grotesk', 'Helvetica Now Display', Arial, sans-serif;
   line-height: 1.5;
+  letter-spacing: -0.035rem;
 
   color-scheme: light;
 
@@ -12,6 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --primary: #16A18C;
+  --primary-light: #D8ECE9;
+  --default-line-height: 1.0;
 }
 *{
   margin: 0;
@@ -32,4 +35,7 @@ button{
   font-size: inherit;
   font-family: inherit;
   font-weight: 500;
+}
+input::placeholder, input{
+  font-family: 'Space Grotesk';
 }

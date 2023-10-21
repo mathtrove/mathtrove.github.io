@@ -29,7 +29,7 @@ const NavBar = () =>{
                         <Link to="/">Feedback</Link>
                     </li>
                 </ul>
-                <button className='cta'>Get full access</button>
+                <button className='cta nav-cta'>Get full access</button>
             </div>
             <div className='nav-link-box-mob'>
                 <span className='material-symbols-outlined ctaIcon' onClick={() =>{ document.querySelector(".menu-pop").classList.add("active")}}>menu</span>

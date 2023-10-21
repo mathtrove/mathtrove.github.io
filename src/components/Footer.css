@@ -14,6 +14,15 @@
 .footer-left img{
     width: 4rem;
 }
+.footer-left > strong{
+    opacity: 0.7;
+    font-weight: 500;
+}
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 .acc-title{
     display: flex;
     align-items: center;
@@ -21,13 +30,15 @@
     background-color: #ddd;
     border-radius: 56px;
     padding: 16px 42px;
+    cursor: pointer;
 }
 
 .acc-title h1{
     font-size: 48px;
     font-weight: 600;
 }
-.acc-links{
+.acc-links.active{
+    display: block;
     padding: 16px 42px;
 }
 .acc-links ul{
@@ -35,9 +46,30 @@
     font-size: 20px;
 }
 
-span.material-symbols-outlined{
+.acc-icon{
     font-size: 60px;
+    transition: all 0.3s ease;
 }
-span.material-symbols-utlined.active{
-    transform: rotate3d(45deg);
+.acc-icon.active{
+    transform: rotate(45deg);
+}
+
+.acc-links{
+    transition: all 0.3s ease;
+    display: none;
+}
+
+@media screen and (width < 900px) {
+    #footer{
+        flex-direction: column-reverse;
+        row-gap: 2rem;
+    }
+    .footer-left{
+        flex-direction: row;
+    }
+}
+@media screen and (width < 480px) {
+    .acc-title h1{
+        font-size: 32px;
+    }
 }

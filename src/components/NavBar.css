@@ -37,6 +37,8 @@ nav{
     width: 32px;
 }
 .cta{
+    display: flex;
+    align-items: center;
     border: none;
     background-color: var(--primary);
     color: white;
@@ -50,7 +52,7 @@ nav{
         flex-direction: column;
         animation: slideFromRight 0.5s forwards;
     }
-    .cta{
+    .cta.nav-cta{
         margin-top: 16px;
     }
     .nav-link-box{ display: none;}
@@ -65,6 +67,13 @@ nav{
     .menu-pop .cta{
         font-size: 42px;
         font-weight: 400;
+        width: max-content;
+    }
+}
+
+@media screen and (width < 480px) {
+    .menu-pop, .menu-pop .cta{
+        font-size: 32px;
     }
 }
 @keyframes slideFromRight {
