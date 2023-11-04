@@ -14,45 +14,45 @@ const NavBar = () =>{
             <div className='nav-link-box'>
                 <ul className='nav-links'>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link className='link' to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/">Topics</Link>
+                        <Link className='link' to="/">Topics</Link>
                     </li>
                     <li>
-                        <Link to="about">About</Link>
+                        <Link className='link' to="about">About</Link>
                     </li>
                     <li>
-                        <Link to="/">Accessibility</Link>
+                        <Link className='link' to="/">Accessibility</Link>
                     </li>
                     <li>
-                        <Link to="/">Feedback</Link>
+                        <Link className='link' to="/">Feedback</Link>
                     </li>
                 </ul>
                 <button className='cta nav-cta'>Get full access</button>
             </div>
+            <span className='material-symbols-outlined ctaIcon' onClick={() =>{ document.querySelector(".menu-pop").classList.add("active")}}>menu</span>
             <div className='nav-link-box-mob'>
-                <span className='material-symbols-outlined ctaIcon' onClick={() =>{ document.querySelector(".menu-pop").classList.add("active")}}>menu</span>
                 <div className='menu-pop'>
                     <span className='material-symbols-outlined ctaIcon' style={{color: 'white', alignSelf: 'end'}} onClick={() =>{document.querySelector(".menu-pop").classList.remove("active")}}>close</span>
                 <ul>
                     <li>
-                        <Link onClick={rmPopUp} to="/">Home</Link>
+                        <Link className='link' onClick={rmPopUp} to="/">Home</Link>
                     </li>
                     <li>
-                        <Link onClick={rmPopUp} to="/">Topics</Link>
+                        <Link className='link' onClick={rmPopUp} to="/">Topics</Link>
                     </li>
                     <li>
-                        <Link onClick={rmPopUp} to="about">About</Link>
+                        <Link className='link' onClick={rmPopUp} to="about">About</Link>
                     </li>
                     <li>
-                        <Link onClick={rmPopUp} to="/">Accessibility</Link>
+                        <Link className='link' onClick={rmPopUp} to="/">Accessibility</Link>
                     </li>
                     <li>
-                        <Link onClick={rmPopUp} to="/">Feedback</Link>
+                        <Link className='link' onClick={rmPopUp} to="/">Feedback</Link>
                     </li>
                 </ul>
-                <button className='cta'>Get full access</button>
+                <button className='cta main-cta'>Get full access</button>
                 </div>
             </div>
         </nav>

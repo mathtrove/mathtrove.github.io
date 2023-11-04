@@ -1,21 +1,106 @@
-
-.material-symbols-outlined{
-    position: relative;
+.material-symbols-outlined {
+  position: relative;
 }
-.material-symbols-outlined.ctaIcon{
-    cursor: pointer;
+.material-symbols-outlined.ctaIcon {
+  cursor: pointer;
 }
 
-.material-symbols-outlined.material-filled{
-    font-variation-settings: 
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
+.material-symbols-outlined.material-filled {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 @media screen and (width < 690px) {
-    body{
-        padding: 1.2rem 24px !important;
-    }
+  body {
+    padding: 1.2rem 24px !important;
+  }
+  nav {
+    padding: 1.2rem 24px;
+  }
+}
+
+.App > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-top: 64px;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  border: 2px solid #000;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  border-radius: 56px;
+  transition: all 0.3s;
+}
+.cta::before{
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  top: 0%;
+  right: 50%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  background-color: #000000;
+  z-index: -1;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+.cta.main-cta{
+  border: 2px solid var(--primary);
+}
+.cta.cta.main-cta:hover{
+  color: var(--primary);
+}
+.cta.main-cta::before{
+  background-color: var(--primary);
+}
+.ctaStrkd {
+  background-color: transparent;
+  border: 2px solid #000;
+  color: initial;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  border-radius: 56px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.ctaStrkd::before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  top: 100%;
+  right: 50%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background-color: #000000;
+  z-index: -1;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.ctaStrkd:hover {
+  color: white;
+}
+.cta:hover {
+  color: black;
+  background-color: transparent;
+}
+.cta:hover:before {
+  top: 100%;
+  border-radius: 100%;
+}
+.ctaStrkd:hover::before {
+  top: 0%;
+  border-radius: 0px;
 }

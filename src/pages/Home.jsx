@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css';
-import heroImg from './assets/shapes.png';
-import Bibliophile from './assets/Bibliophile.svg';
+import heroImg from '../assets/shapes.png'
+import Bibliophile from '../assets/Bibliophile.svg';
 import { Link } from 'react-router-dom';
 // import ReactDOM from 'react-dom/client'
 const Home = () =>{
@@ -12,7 +12,7 @@ const Home = () =>{
                     <h1>Mathematical formulas for everyone</h1>
                     <p>Math Trove is a huge math library which contains from basic to advanced mathematical formulas.</p>
                     {/* <input type="text" className='search-bar' placeholder='Search any topic / formula'/> */}
-                    <Link to='about'><button className='cta waitlist-cta'>Join the waitlist<span className='material-symbols-outlined'>arrow_forward</span></button></Link>
+                    <Link to='frvjne57huhvbuthi86ibjfg'><button className='cta main-cta waitlist-cta'>Join the waitlist<span className='material-symbols-outlined'>arrow_forward</span></button></Link>
                 </div>
                 <div className='hero-right'>
                     <img src={heroImg} alt="book shelf image" />
@@ -33,7 +33,7 @@ const Home = () =>{
                     <div className="topic-box">Algebra</div>
                     <div className="topic-box">Calculus</div>
                     <div className="topic-box">Logarithms</div>
-                    <button className='cta'>and more <span className="material-symbols-outlined">arrow_forward</span></button>
+                    <button className='cta main-cta'>and more <span className="material-symbols-outlined">arrow_forward</span></button>
                 </div>
             </section>
             <section id='home-f1'>
@@ -47,7 +47,7 @@ const Home = () =>{
             </section>
             <section id="hero-end">
                 <strong>Can't find that formula? No need to worry from now on!</strong>
-                <Link to='about'><button className='cta waitlist-cta'>Join the waitlist<span className='material-symbols-outlined'>arrow_forward</span></button></Link>
+                <Link to='frvjne57huhvbuthi86ibjfg'><button className='cta main-cta waitlist-cta'>Join the waitlist<span className='material-symbols-outlined'>arrow_forward</span></button></Link>
             </section>
         </>
     )

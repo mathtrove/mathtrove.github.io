@@ -3,11 +3,11 @@
     position: fixed;
     background-color: black;
     right: 0px; top: 0px; bottom: 0px;
-    padding: 1.2rem 2rem;
-    z-index: 2;
-    font-size: 56px;
+    padding: 2.4rem 48px;
+    z-index: 20;
+    font-size: 48px;
 }
-.nav-link-box-mob{
+.nav-link-box-mob, .ctaIcon{
     display: none;
 }
 .menu-pop ul{
@@ -16,17 +16,40 @@
 }
 
 nav{
+    position: fixed;
+    top: 0%; right: 0%; left: 0%;
+    z-index: 10;
     font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1.2rem 36px;
+    margin: 12px;
+    border-radius: 56px;
+    background-color: var(--primary-Xlight);
 }
 .nav-link-box, .nav-links{
     display: flex;
     align-items: center;
-    gap: 1.4rem;
+    gap: 2rem;
     list-style-type: none;
 }
+a.link::before{
+    content: '';
+    position: absolute;
+    background-color: var(--primary);
+    bottom: -14px; 
+    left: 0%; right: 0%;
+    border-radius: 56px;
+    height: 4px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  a.link:hover::before{
+    bottom: -6px;
+    opacity: 1;
+  }
 .nav-title{
     display: flex;
     align-items: center;
@@ -36,27 +59,22 @@ nav{
 .nav-title img{
     width: 32px;
 }
-.cta{
-    display: flex;
-    align-items: center;
-    border: none;
-    background-color: var(--primary);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 56px;
-}
-
 @media screen and (width <= 1024px) {
     .menu-pop.active{
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         animation: slideFromRight 0.5s forwards;
     }
-    .cta.nav-cta{
+    .nav-cta{
         margin-top: 16px;
     }
     .nav-link-box{ display: none;}
     .nav-link-box-mob{
+        display: block;
+        position: absolute;
+    }
+    .ctaIcon {
         display: block;
     }
 }
@@ -72,8 +90,11 @@ nav{
 }
 
 @media screen and (width < 480px) {
-    .menu-pop, .menu-pop .cta{
+    .menu-pop{
         font-size: 32px;
+    }
+    .menu-pop .cta{
+        font-size: 24px;
     }
 }
 @keyframes slideFromRight {

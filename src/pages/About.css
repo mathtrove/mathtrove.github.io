@@ -1,0 +1,45 @@
+#abt{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.abt-left h1, #team h1{
+    font-size: 64px;
+    margin-bottom: 1.2rem;
+}
+#team{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.2rem 0;
+}
+
+#wrp strong{
+    display: block;
+    font-size: 6vw;
+    line-height: var(--default-line-height);
+    width: 80%;
+    margin-bottom: 1.2rem;
+}
+#wrp p{
+    width: 80%;
+    font-size: 20px;
+}
+#wrp p span {
+    color: var(--primary);
+}
+@media screen and (width < 900px) {
+    #abt{
+        flex-direction: column-reverse;
+        row-gap: 1rem;
+    }
+    .abt-right img{
+        width: 80vw;
+    }
+}
+@media screen and (width < 560px) {
+    #wrp strong{
+        font-size: 32px;
+    }
+}

@@ -1,5 +1,6 @@
-import Home from './Home.jsx'
-import About from './About.jsx'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact'
 import NavBar from './components/NavBar.jsx'
 import Footer from './components/Footer.jsx';
 import Error from './Error.jsx';
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
     {
       path:"/about",
       element:<About/>,
+    },
+    {
+      path: "/frvjne57huhvbuthi86ibjfg",
+      element: <Contact />
     }
   ],
     errorElement: <Error />,

@@ -6,27 +6,7 @@
   transition: background-color 0.3s, color 0.6s;
   overflow: hidden;
 }
-.waitlist-cta:before {
-  content: "";
-  position: absolute;
-  bottom: 0%;
-  top: 100%;
-  right: 50%;
-  left: 0%;
-  height: 100%;
-  width: 100%;
-  border-radius: 100%;
-  background-color: #000000;
-  z-index: -1;
-  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-.waitlist-cta:hover {
-  background-color: transparent;
-}
-.waitlist-cta:hover:before {
-  top: 0%;
-  border-radius: 0px;
-}
+
 #hero-end{
   display: flex;
   flex-direction: column;
@@ -56,7 +36,6 @@
 .hero-left h1 {
   font-size: 64px;
   font-weight: 700;
-  line-height: var(--default-line-height);
 }
 .hero-left h1,
 .hero-left p {
@@ -85,7 +64,7 @@
 
 .hero-quote {
   height: 250px;
-  display: flex;
+  display: none;
   gap: 12px;
   grid-area: hero-quote;
 }
@@ -106,7 +85,7 @@
   font-size: 56px;
   font-weight: 700;
   justify-content: center;
-  background: url(./assets/man.png) 50% no-repeat, #16a18c;
+  background: url(../assets/man.png) 50% no-repeat, #16a18c;
   background-blend-mode: multiply, normal;
 }
 .quote-title blockquote {
@@ -123,12 +102,10 @@
 #wpfo {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
+  gap: 2rem;
 }
 #wpfo h2 {
-  font-size: 16vw;
+  font-size: 8vw;
   line-height: var(--default-line-height);
 }
 .topic-boxes {
@@ -165,7 +142,6 @@
 
 .home-f1-left h1 {
   font-size: 56px;
-  line-height: var(--default-line-height);
 }
 
 .home-f1-right {
@@ -181,8 +157,16 @@
   .hero-right img {
     width: 100%;
   }
+  .hero-quote{
+    display: none;
+  }
 }
-
+@media screen and (width < 840px) {
+  #home-f1{
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
 @media screen and (width < 720px) {
   .hero-quote {
     flex-direction: column;
@@ -193,13 +177,6 @@
     width: auto;
     height: 100%;
   }
-}
-@media screen and (width < 690px) {
-  #home-f1{
-    flex-direction: column;
-    gap: 1.2rem;
-  }
-  
 }
 @media screen and (width < 480px) {
   .topic-box, #wpfo .cta{

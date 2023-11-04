@@ -26,16 +26,16 @@ const Footer = () =>{
                     <div className={selected === i ? 'acc-links active' : 'acc-links'}>
                         <ul>
                             <li>
-                                <Link to="about">{footerLinks.links[0]}</Link>
+                                <Link className='link' to={footerLinks.href[0]}>{footerLinks.links[0]}</Link>
                             </li>
                             <li>
-                                <Link to="/">{footerLinks.links[1]}</Link>
+                                <Link className='link' to={footerLinks.href[1]}>{footerLinks.links[1]}</Link>
                             </li>
                             <li>
-                                <Link to="/">{footerLinks.links[2]}</Link>
+                                <Link className='link' to={footerLinks.href[2]}>{footerLinks.links[2]}</Link>
                             </li>
                             <li>
-                                <Link to="/">{footerLinks.links[3]}</Link>
+                                <Link className='link' to={footerLinks.href[3]}>{footerLinks.links[3]}</Link>
                             </li>
                         </ul>
                     </div>
@@ -54,21 +54,25 @@ const footerData = [
     {
         key: 1,
         title: "Company",
-        links: ["About Us","Support","Contact","Feedback"]
+        links: ["About Us","Contact","Feedback"],
+        href: ["about","/","/"]
     },
     {
         key: 2,
         title: "Resources",
-        links: ["Topics","Categories","Download"]
+        links: ["Topics","Support","Our Story"],
+        href: ["/", "/","/"]
     },
     {
         key: 3,
         title: "Updates",
-        links: ["What's new?","Updates Timeline","Email Notifications"]
+        links: ["What's new?","Updates Timeline","Email Notifications"],
+        href: ["/", "/","/"]
     },
     {
         key: 4,
         title: "Social",
-        links: ["GitHub","Behance"]
+        links: ["GitHub","Behance"],
+        href: ["https://github.com/mathtrove/mathtrove.github.io", "https://behance.net/abdulraufedits"]
     }
 ]

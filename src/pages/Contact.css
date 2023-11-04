@@ -1,0 +1,92 @@
+#contact{
+    padding: 2rem 0;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+#contact h1{
+    font-size: 72px;
+}
+#contact h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    align-items: flex-start;
+    padding: 0 6rem;
+    flex-grow: 2;
+}
+.input-box{
+    position: relative;
+    margin-top: 32px;
+}
+.input-field{
+    width: 36ch;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    padding: 1rem;
+    outline: none;
+}
+
+textarea{
+    resize: vertical;
+    padding-right: 3.6rem !important;
+}
+label{
+    position: absolute;
+    top: 14px; left: 16px;
+    opacity: 0.5;
+    z-index: 2;
+    pointer-events: none;
+    transition: all 0.3s ;
+}
+
+.input-field:focus{
+    border: 2px solid #222;
+}
+.input-field:focus + label{
+    opacity: 1;
+    top: -28px;
+    left: 0px;
+}
+input[type="submit"].cta{
+    background-color: var(--primary);
+    border: none;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 4px;
+}
+input[type="submit"].cta:hover{
+    background-color: black;
+    color: white;
+}
+@media screen and (width < 1024px) {
+    #contact{
+        flex-direction: column;
+        align-items: initial;
+    }
+    form{
+        align-items: center;
+    }
+}
+
+@media screen and (width < 480px) {
+    .input-field{
+        width: 28ch;
+    }
+    #contact h3{
+        font-size: 18px;
+    }
+    #contact h1{
+        font-size: 48px;
+        margin-bottom: 1rem;
+    }
+}
+
