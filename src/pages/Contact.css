@@ -52,9 +52,13 @@ label{
     border: 2px solid #222;
 }
 .input-field:focus + label{
-    opacity: 1;
-    top: -28px;
-    left: 0px;
+    animation: labelAnim 0.3s ease forwards;
+}
+
+@keyframes labelAnim {
+    to{
+        opacity: 1; top: -28px; left: 0px;
+    }
 }
 input[type="submit"].cta{
     background-color: var(--primary);
@@ -80,6 +84,9 @@ input[type="submit"].cta:hover{
 @media screen and (width < 480px) {
     .input-field{
         width: 28ch;
+    }
+    textarea{
+        padding-right: 3.13rem !important;
     }
     #contact h3{
         font-size: 18px;
