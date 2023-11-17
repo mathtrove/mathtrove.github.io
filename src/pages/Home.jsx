@@ -1,6 +1,5 @@
 import React from 'react'
 import './Home.css';
-import heroImg from '../assets/shapes.png'
 import Bibliophile from '../assets/Bibliophile.svg';
 import { Link } from 'react-router-dom';
 // import ReactDOM from 'react-dom/client'
@@ -15,7 +14,7 @@ const Home = () =>{
                     <Link to='frvjne57huhvbuthi86ibjfg'><button className='cta main-cta waitlist-cta'>Join the waitlist<span className='material-symbols-outlined'>arrow_forward</span></button></Link>
                 </div>
                 <div className='hero-right'>
-                    <img src={heroImg} alt="book shelf image" />
+                    <img src="https://ik.imagekit.io/abduledits5/mathtrove/shapes.png?updatedAt=1700224297545" alt="book shelf image" />
                 </div>
                 <div className='hero-quote'>
                     <div className='quote-title'>

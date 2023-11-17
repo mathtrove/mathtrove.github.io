@@ -1,19 +1,30 @@
 import React, {useState} from "react";
+import { useForm } from '@formspree/react';
 import './Contact.css';
 const Contact = () => {
+
+    const [state, handleSubmit] = useForm("mzblqavy");
+    if (state.succeeded) {
+        return <p>Thanks for joining!</p>;
+    }
 
     const [nameInput, setNameInput] = useState("");
     const [emailInput, setEmailInput] = useState("");
     const [countryInput, setCountryInput] = useState("");
     const [msgInput, setMsgInput] = useState("");
+    let submitForm = ()=>{
+        handleSubmit;
 
-    const submitForm = (e)=>{
-        e.preventDefault();
-        setNameInput("");
-        setEmailInput("");
-        setCountryInput("");
-        setMsgInput("");
+        const clearForm = (e)=>{
+            e.preventDefault();
+            setNameInput("");
+            setEmailInput("");
+            setCountryInput("");
+            setMsgInput("");
+        }
+        clearForm();
     }
+    
 
     const changeName = (e)=>{
         setNameInput(e.target.value);
@@ -47,7 +58,7 @@ const Contact = () => {
                 <div className="input-box">
                 <textarea className="input-field" id="suggestion" name="suggestion" value={msgInput} onChange={changeMsg}></textarea><label htmlFor="suggestion">Suggestions (optional)</label>
                 </div>
-                <input type="submit" className="cta" ></input>
+                <input type="submit" className="cta" disabled={state.submitting}></input>
             </form>
         </section>
         
