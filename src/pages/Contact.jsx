@@ -27,8 +27,6 @@ const Contact = () => {
     const changeMsg = (e)=>{
         setMsgInput(e.target.value);
     }
-
-
     return(
         <>
         <section id="contact">
@@ -36,7 +34,7 @@ const Contact = () => {
                 <h1>Join the Waitlist</h1>
                 <h3>Be the first to get notified when our Website gets completed.</h3>
             </div>
-            <form onSubmit={submitForm}  method="post" id="frvjne57huhvbuthi86ibjfg">
+            <form action="https://formspree.io/f/mzblqavy" onSubmit={submitForm}  method="post" id="frvjne57huhvbuthi86ibjfg">
                 <div className="input-box">
                 <input className="input-field " id="name" type="text" name="name" value={nameInput} onChange={changeName} /><label htmlFor="name">Name</label>
                 </div>
@@ -52,8 +50,10 @@ const Contact = () => {
                 <input type="submit" className="cta" ></input>
             </form>
         </section>
+        
         </>
     )
+    
 }
 
 export default Contact;
