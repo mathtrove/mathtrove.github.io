@@ -26,7 +26,7 @@ nav{
     padding: 1.2rem 36px;
     margin: 12px;
     border-radius: 56px;
-    background-color: var(--primary-Xlight);
+    background-color: #fff;
 }
 .nav-link-box, .nav-links{
     display: flex;

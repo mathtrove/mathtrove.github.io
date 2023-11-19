@@ -12,3 +12,12 @@
     font-size: 20px;
     font-weight: 400;
 }
+
+@media screen and (width < 560px) {
+    .member h3{
+        font-size: 24px;
+    }
+    .member h4{
+        font-size: 16px;
+    }
+}

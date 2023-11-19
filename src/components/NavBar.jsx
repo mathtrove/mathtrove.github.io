@@ -17,16 +17,16 @@ const NavBar = () =>{
                         <Link className='link' to="/">Home</Link>
                     </li>
                     <li>
-                        <Link className='link' to="/">Topics</Link>
+                        <Link className='link' to="topics">Topics</Link>
                     </li>
                     <li>
                         <Link className='link' to="about">About</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link className='link' to="/">Accessibility</Link>
-                    </li>
+                    </li> */}
                     <li>
-                        <Link className='link' to="/">Feedback</Link>
+                        <Link className='link' to="feedback">Feedback</Link>
                     </li>
                 </ul>
                 <button className='cta nav-cta'>Get full access</button>
@@ -40,7 +40,7 @@ const NavBar = () =>{
                         <Link className='link' onClick={rmPopUp} to="/">Home</Link>
                     </li>
                     <li>
-                        <Link className='link' onClick={rmPopUp} to="/">Topics</Link>
+                        <Link className='link' onClick={rmPopUp} to="topics">Topics</Link>
                     </li>
                     <li>
                         <Link className='link' onClick={rmPopUp} to="about">About</Link>
@@ -49,7 +49,7 @@ const NavBar = () =>{
                         <Link className='link' onClick={rmPopUp} to="/">Accessibility</Link>
                     </li>
                     <li>
-                        <Link className='link' onClick={rmPopUp} to="/">Feedback</Link>
+                        <Link className='link' onClick={rmPopUp} to="feedback">Feedback</Link>
                     </li>
                 </ul>
                 <button className='cta main-cta'>Get full access</button>

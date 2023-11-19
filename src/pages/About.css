@@ -37,9 +37,15 @@
     .abt-right img{
         width: 80vw;
     }
+    #wrp strong, #wrp p{
+        width: auto;
+    }
 }
 @media screen and (width < 560px) {
     #wrp strong{
-        font-size: 32px;
+        font-size: 42px;
+    }
+    .abt-left h1, #team h1{
+        font-size: 42px;
     }
 }
