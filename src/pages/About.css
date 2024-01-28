@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.abt-left h1, #team h1{
+#team h1{
     font-size: 64px;
     margin-bottom: 1.2rem;
 }

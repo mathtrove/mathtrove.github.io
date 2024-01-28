@@ -37,7 +37,9 @@ button{
   font-family: inherit;
   font-weight: 500;
 }
-
+plaintext{
+  font-family: inherit;
+}
 h1{
   line-height: var(--default-line-height);
 }
@@ -46,4 +48,8 @@ input::placeholder, input{
 }
 a{
   position: relative;
+}
+code{
+  font-family: 'Georgia', 'Arial';
+  letter-spacing: initial;
 }

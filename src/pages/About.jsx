@@ -8,7 +8,7 @@ const About = () =>{
         <>
         <section id='abt'>
             <div className="abt-left">
-                <h1>About Math Trove</h1>
+                <h1 className='main-h1'>About Math Trove</h1>
                 <p>Our mission is to make the access of all mathematical formulas available to everyone at everytime.</p>
             </div>
             <div className="abt-right">

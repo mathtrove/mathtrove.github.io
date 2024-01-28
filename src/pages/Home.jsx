@@ -28,11 +28,11 @@ const Home = () =>{
             <section id='wpfo'>
                 <h2>We provide formulas of</h2>
                 <div className='topic-boxes'>
-                    <div className="topic-box">Trigonometry</div>
-                    <div className="topic-box">Algebra</div>
-                    <div className="topic-box">Calculus</div>
-                    <div className="topic-box">Logarithms</div>
-                    <button className='cta main-cta'>and more <span className="material-symbols-outlined">arrow_forward</span></button>
+                    <div className="home-topic-box">Trigonometry</div>
+                    <div className="home-topic-box">Algebra</div>
+                    <div className="home-topic-box">Calculus</div>
+                    <div className="home-topic-box">Logarithms</div>
+                    <Link to='topics'><button className='cta main-cta'>and more <span className="material-symbols-outlined">arrow_forward</span></button></Link>
                 </div>
             </section>
             <section id='home-f1'>

@@ -1,17 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import './Footer.css';
 
 const Footer = () =>{
-
-    const [selected, setSelected] = useState(null);
-
-    const footerToggle = (i) => {
-        if(selected === i){
-            return setSelected(null);
-        }
-        setSelected(i)
-    }
     return(
         <footer id='footer'>
             <aside className='footer-left'>
@@ -22,8 +12,8 @@ const Footer = () =>{
                 {footerData.map((footerLinks, i) => {
                     return (
                         <section className='accordin' key={footerLinks.key}>
-                    <div className='acc-title' onClick={()=> footerToggle(i)}><h1>{footerLinks.title}</h1><span className={selected === i ? "material-symbols-outlined acc-icon active" : "material-symbols-outlined acc-icon"}>add</span></div>
-                    <div className={selected === i ? 'acc-links active' : 'acc-links'}>
+                    <div className='acc-title'><h1>{footerLinks.title}</h1></div>
+                    <div className='acc-links'>
                         <ul>
                             <li>
                                 <Link className='link' to={footerLinks.href[0]}>{footerLinks.links[0]}</Link>
@@ -33,9 +23,6 @@ const Footer = () =>{
                             </li>
                             <li>
                                 <Link className='link' to={footerLinks.href[2]}>{footerLinks.links[2]}</Link>
-                            </li>
-                            <li>
-                                <Link className='link' to={footerLinks.href[3]}>{footerLinks.links[3]}</Link>
                             </li>
                         </ul>
                     </div>
@@ -61,7 +48,7 @@ const footerData = [
         key: 2,
         title: "Resources",
         links: ["Topics","Support","Our Story"],
-        href: ["/", "/","/"]
+        href: ["topics", "/","/"]
     },
     {
         key: 3,
